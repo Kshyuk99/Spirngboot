@@ -17,13 +17,13 @@ public class ShopRepository {
     private JdbcTemplate jdbcTemplate;
 
     public List<product> findAll() {
-        return jdbcTemplate.query("SELECT * FROM products", new UserRowMapper());
+        return jdbcTemplate.query("SELECT * FROM products", new productRowMapper());
     }
 
     public product findById(Long id) {
         return jdbcTemplate.queryForObject(
                 "SELECT * FROM products WHERE id = ?",
-                new UserRowMapper(),
+                new productRowMapper(),
                 id
         );
     }
@@ -46,7 +46,7 @@ public class ShopRepository {
         jdbcTemplate.update("DELETE FROM products WHERE id = ?", id);
     }
 
-    private static class UserRowMapper implements RowMapper<product> {
+    private static class productRowMapper implements RowMapper<product> {
         @Override
         public product mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new product(

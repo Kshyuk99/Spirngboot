@@ -5,13 +5,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>사용자 정보</title>
+    <title>상품 정보</title>
     <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="mb-4">${user.id == null ? '새 사용자 등록' : '사용자 정보 수정'}</h2>
+    <h2 class="mb-4">${user.id == null ? '새 id 등록' : '사용자 정보 수정'}</h2>
 
+    <%--@elvariable id="user" type=""--%>
     <form:form action="/users" method="post" modelAttribute="user">
         <form:hidden path="id"/>
 

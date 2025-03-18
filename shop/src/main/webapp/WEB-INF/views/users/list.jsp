@@ -4,13 +4,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>사용자 목록</title>
+    <title>상품 목록</title>
     <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="mb-4">사용자 목록</h2>
-    <a href="<c:url value='/users/new'/>" class="btn btn-primary mb-3">새 사용자 등록</a>
+    <h2 class="mb-4">상품 목록</h2>
+    <a href="<c:url value='/users/new'/>" class="btn btn-primary mb-3">새 상품 등록</a>
 
     <table class="table table-striped">
         <thead>

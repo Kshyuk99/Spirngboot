@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EX2</title>
+</head>
+<body>
+<h1>EX2</h1>
+<ul>
+
+    <li th:each="dto1 : ${list2}">
+        <!--        [[${dto}]]-->
+        <p th:text="${dto1}">연습</p>
+    </li>
+</ul>
+<hr>
+<ul>
+
+    <li th:each="dto : ${list}">
+<!--        [[${dto}]]-->
+        <p th:text="${dto}">연습</p>
+    </li>
+</ul>
+</body>
+</html>

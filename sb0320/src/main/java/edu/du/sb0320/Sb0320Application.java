@@ -17,7 +17,7 @@ public class Sb0320Application {
         SpringApplication.run(Sb0320Application.class, args);
     }
 
-    @PostConstruct
+//    @PostConstruct
     public void init() {
         MyUser myUser = MyUser.builder()
                 .email("test1@gmail.com")
